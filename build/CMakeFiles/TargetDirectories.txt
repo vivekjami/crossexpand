@@ -1,0 +1,8 @@
+/home/vivek/vivek/crossexpand/build/CMakeFiles/crossexpand.dir
+/home/vivek/vivek/crossexpand/build/CMakeFiles/test_basic.dir
+/home/vivek/vivek/crossexpand/build/CMakeFiles/test.dir
+/home/vivek/vivek/crossexpand/build/CMakeFiles/edit_cache.dir
+/home/vivek/vivek/crossexpand/build/CMakeFiles/rebuild_cache.dir
+/home/vivek/vivek/crossexpand/build/_deps/json-build/CMakeFiles/test.dir
+/home/vivek/vivek/crossexpand/build/_deps/json-build/CMakeFiles/edit_cache.dir
+/home/vivek/vivek/crossexpand/build/_deps/json-build/CMakeFiles/rebuild_cache.dir

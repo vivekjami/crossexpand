@@ -1,0 +1,53 @@
+{
+  "version": "1.0",
+  "templates": {
+    "/hello": {
+      "text": "Hello, World!",
+      "description": "Simple greeting template"
+    },
+    "/email": {
+      "text": "john.doe@company.com",
+      "description": "Default email address"
+    },
+    "/sig": {
+      "text": "Best regards,\n{name}\n{title}\n{company}",
+      "description": "Email signature with variables",
+      "variables": ["name", "title", "company"]
+    },
+    "/addr": {
+      "text": "{company}\n{address}\n{city}, {state} {zip}",
+      "description": "Company address template",
+      "variables": ["company", "address", "city", "state", "zip"]
+    },
+    "/meeting": {
+      "text": "Hi {name},\n\nLet's schedule a meeting to discuss {topic}.\n\nAvailable times:\n• {time1}\n• {time2}\n• {time3}\n\nPlease let me know what works best for you.\n\nThanks!",
+      "description": "Meeting request template",
+      "variables": ["name", "topic", "time1", "time2", "time3"]
+    },
+    "/date": {
+      "text": "{current_date}",
+      "description": "Current date insertion"
+    }
+  },
+  "variables": {
+    "name": "John Doe",
+    "title": "Software Engineer",
+    "company": "Tech Company Inc.",
+    "address": "123 Main Street",
+    "city": "Anytown",
+    "state": "ST",
+    "zip": "12345",
+    "topic": "project planning",
+    "time1": "Monday 2:00 PM",
+    "time2": "Tuesday 10:00 AM", 
+    "time3": "Wednesday 3:00 PM",
+    "current_date": "2024-01-15"
+  },
+  "settings": {
+    "expansion_delay_ms": 50,
+    "max_template_length": 10000,
+    "enable_logging": true,
+    "log_level": 1,
+    "log_file": ""
+  }
+}
