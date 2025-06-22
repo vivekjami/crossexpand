@@ -8,12 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/vivek/vivek/crossexpand/src/core/advanced_template_engine.cpp" "CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/core/enhanced_text_injector.cpp" "CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/core/event_queue.cpp" "CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/core/memory_pool.cpp" "CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/template_engine.cpp" "CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/main.cpp" "CMakeFiles/crossexpand.dir/src/main.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/main.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/platform/linux/x11_input_manager.cpp" "CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/platform/linux/x11_text_injector.cpp" "CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/utils/config_manager.cpp" "CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/utils/logger.cpp" "CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/utils/performance_monitor.cpp" "CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o" "gcc" "CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

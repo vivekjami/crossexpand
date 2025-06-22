@@ -9,6 +9,12 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(X11 REQUIRED x11 xtst)
 find_package(Threads REQUIRED)
 
+# Check for UUID library
+find_library(UUID_LIB uuid)
+if(NOT UUID_LIB)
+    message(FATAL_ERROR "UUID library not found")
+endif()
+
 # Fetch nlohmann/json
 include(FetchContent)
 FetchContent_Declare(
@@ -28,15 +34,54 @@ include_directories(src)
 # Core source files
 set(CORE_SOURCES
     src/core/template_engine.cpp
+    src/core/event_queue.cpp
+    src/core/advanced_template_engine.cpp
+    src/core/enhanced_text_injector.cpp
+    src/core/memory_pool.cpp
     src/utils/logger.cpp
     src/utils/config_manager.cpp
+    src/utils/performance_monitor.cpp
 )
 
-# Platform source files
+# Platform source files  
 set(PLATFORM_SOURCES
     src/platform/linux/x11_input_manager.cpp
     src/platform/linux/x11_text_injector.cpp
 )
+
+# Day 2 demo executable
+add_executable(demo_day2
+    src/demo_day2.cpp
+    ${CORE_SOURCES}
+)
+
+target_link_libraries(demo_day2
+    PRIVATE
+    ${X11_LIBRARIES}
+    ${UUID_LIB}
+    Threads::Threads
+    nlohmann_json::nlohmann_json
+)
+
+target_include_directories(demo_day2 PRIVATE ${X11_INCLUDE_DIRS})
+target_compile_options(demo_day2 PRIVATE ${X11_CFLAGS_OTHER})
+
+# Simplified Day 2 demo executable
+add_executable(demo_day2_simple
+    src/demo_day2_simple.cpp
+    ${CORE_SOURCES}
+)
+
+target_link_libraries(demo_day2_simple
+    PRIVATE
+    ${X11_LIBRARIES}
+    ${UUID_LIB}
+    Threads::Threads
+    nlohmann_json::nlohmann_json
+)
+
+target_include_directories(demo_day2_simple PRIVATE ${X11_INCLUDE_DIRS})
+target_compile_options(demo_day2_simple PRIVATE ${X11_CFLAGS_OTHER})
 
 # Main executable
 add_executable(crossexpand
@@ -49,6 +94,7 @@ add_executable(crossexpand
 target_link_libraries(crossexpand
     PRIVATE
     ${X11_LIBRARIES}
+    ${UUID_LIB}
     Threads::Threads
     nlohmann_json::nlohmann_json
 )
@@ -70,4 +116,22 @@ target_link_libraries(test_basic
     nlohmann_json::nlohmann_json
 )
 
-add_test(NAME BasicTests COMMAND test_basic)
+# Enhanced test executable
+add_executable(test_advanced
+    tests/test_advanced.cpp
+    ${CORE_SOURCES}
+)
+
+target_link_libraries(test_advanced
+    PRIVATE
+    ${X11_LIBRARIES}
+    ${UUID_LIB}
+    Threads::Threads
+    nlohmann_json::nlohmann_json
+)
+
+target_include_directories(test_advanced PRIVATE ${X11_INCLUDE_DIRS})
+target_compile_options(test_advanced PRIVATE ${X11_CFLAGS_OTHER})
+
+add_test(NAME AdvancedTests COMMAND test_advanced)
+add_test(NAME Day2Demo COMMAND demo_day2)

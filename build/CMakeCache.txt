@@ -317,6 +317,9 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Path to a library.
+UUID_LIB:FILEPATH=/usr/lib/x86_64-linux-gnu/libuuid.so
+
 //Value Computed by CMake
 nlohmann_json_BINARY_DIR:STATIC=/home/vivek/vivek/crossexpand/build/_deps/json-build
 
@@ -545,10 +548,6 @@ X11_x11_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 X11_x11_MODULE_NAME:INTERNAL=x11
 X11_x11_PREFIX:INTERNAL=/usr
 X11_x11_VERSION:INTERNAL=1.8.7
-X11_xrecord_INCLUDEDIR:INTERNAL=
-X11_xrecord_LIBDIR:INTERNAL=
-X11_xrecord_PREFIX:INTERNAL=
-X11_xrecord_VERSION:INTERNAL=
 X11_xtst_INCLUDEDIR:INTERNAL=/usr/include
 X11_xtst_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
 X11_xtst_MODULE_NAME:INTERNAL=xtst
