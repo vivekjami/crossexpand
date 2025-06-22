@@ -64,11 +64,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/demo_day2.dir/DependInfo.cmake"
-  "CMakeFiles/demo_day2_simple.dir/DependInfo.cmake"
-  "CMakeFiles/crossexpand.dir/DependInfo.cmake"
   "CMakeFiles/crossexpand_day3.dir/DependInfo.cmake"
   "CMakeFiles/test_basic.dir/DependInfo.cmake"
   "CMakeFiles/test_advanced.dir/DependInfo.cmake"
-  "CMakeFiles/test_day3_simple.dir/DependInfo.cmake"
   )
