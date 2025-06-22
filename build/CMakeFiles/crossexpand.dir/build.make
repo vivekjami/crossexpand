@@ -27,6 +27,9 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -153,10 +156,24 @@ CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivek/vivek/crossexpand/src/core/memory_pool.cpp -o CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.s
 
+CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o: CMakeFiles/crossexpand.dir/flags.make
+CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o: /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp
+CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o -MF CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o.d -o CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o -c /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp
+
+CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp > CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.i
+
+CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp -o CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.s
+
 CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o: CMakeFiles/crossexpand.dir/flags.make
 CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o: /home/vivek/vivek/crossexpand/src/utils/logger.cpp
 CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o -MF CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o.d -o CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/logger.cpp
 
 CMakeFiles/crossexpand.dir/src/utils/logger.cpp.i: cmake_force
@@ -170,7 +187,7 @@ CMakeFiles/crossexpand.dir/src/utils/logger.cpp.s: cmake_force
 CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o: CMakeFiles/crossexpand.dir/flags.make
 CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o: /home/vivek/vivek/crossexpand/src/utils/config_manager.cpp
 CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o -MF CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o.d -o CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/config_manager.cpp
 
 CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.i: cmake_force
@@ -184,7 +201,7 @@ CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.s: cmake_force
 CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o: CMakeFiles/crossexpand.dir/flags.make
 CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o: /home/vivek/vivek/crossexpand/src/utils/performance_monitor.cpp
 CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o -MF CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o.d -o CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/performance_monitor.cpp
 
 CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.i: cmake_force
@@ -198,7 +215,7 @@ CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.s: cmake_force
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o: CMakeFiles/crossexpand.dir/flags.make
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o: /home/vivek/vivek/crossexpand/src/platform/linux/x11_input_manager.cpp
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o -MF CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o.d -o CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.o -c /home/vivek/vivek/crossexpand/src/platform/linux/x11_input_manager.cpp
 
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.i: cmake_force
@@ -212,7 +229,7 @@ CMakeFiles/crossexpand.dir/src/platform/linux/x11_input_manager.cpp.s: cmake_for
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o: CMakeFiles/crossexpand.dir/flags.make
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o: /home/vivek/vivek/crossexpand/src/platform/linux/x11_text_injector.cpp
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o: CMakeFiles/crossexpand.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o -MF CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o.d -o CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.o -c /home/vivek/vivek/crossexpand/src/platform/linux/x11_text_injector.cpp
 
 CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.i: cmake_force
@@ -231,6 +248,7 @@ crossexpand_OBJECTS = \
 "CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.o" \
 "CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.o" \
 "CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o" \
+"CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o" \
 "CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o" \
 "CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o" \
 "CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o" \
@@ -246,6 +264,7 @@ crossexpand: CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o
+crossexpand: CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o
 crossexpand: CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o
@@ -254,7 +273,7 @@ crossexpand: CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp
 crossexpand: CMakeFiles/crossexpand.dir/build.make
 crossexpand: /usr/lib/x86_64-linux-gnu/libuuid.so
 crossexpand: CMakeFiles/crossexpand.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable crossexpand"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable crossexpand"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crossexpand.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

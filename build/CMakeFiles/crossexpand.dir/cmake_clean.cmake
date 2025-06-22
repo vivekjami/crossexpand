@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.o.d"
   "CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o"
   "CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o.d"
+  "CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o"
+  "CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o.d"
   "CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.o"
   "CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.o.d"
   "CMakeFiles/crossexpand.dir/src/main.cpp.o"

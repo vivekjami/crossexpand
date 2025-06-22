@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -166,6 +169,19 @@ crossexpand/fast:
 .PHONY : crossexpand/fast
 
 #=============================================================================
+# Target rules for targets named crossexpand_day3
+
+# Build rule for target.
+crossexpand_day3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 crossexpand_day3
+.PHONY : crossexpand_day3
+
+# fast build rule for target.
+crossexpand_day3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/build
+.PHONY : crossexpand_day3/fast
+
+#=============================================================================
 # Target rules for targets named test_basic
 
 # Build rule for target.
@@ -191,6 +207,19 @@ test_advanced/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/build
 .PHONY : test_advanced/fast
 
+#=============================================================================
+# Target rules for targets named test_day3_simple
+
+# Build rule for target.
+test_day3_simple: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_day3_simple
+.PHONY : test_day3_simple
+
+# fast build rule for target.
+test_day3_simple/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/build
+.PHONY : test_day3_simple/fast
+
 src/core/advanced_template_engine.o: src/core/advanced_template_engine.cpp.o
 .PHONY : src/core/advanced_template_engine.o
 
@@ -199,8 +228,10 @@ src/core/advanced_template_engine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/advanced_template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/advanced_template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/advanced_template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/advanced_template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/advanced_template_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/advanced_template_engine.cpp.o
 .PHONY : src/core/advanced_template_engine.cpp.o
 
 src/core/advanced_template_engine.i: src/core/advanced_template_engine.cpp.i
@@ -211,8 +242,10 @@ src/core/advanced_template_engine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/advanced_template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/advanced_template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/advanced_template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/advanced_template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/advanced_template_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/advanced_template_engine.cpp.i
 .PHONY : src/core/advanced_template_engine.cpp.i
 
 src/core/advanced_template_engine.s: src/core/advanced_template_engine.cpp.s
@@ -223,8 +256,10 @@ src/core/advanced_template_engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/advanced_template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/advanced_template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/advanced_template_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/advanced_template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/advanced_template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/advanced_template_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/advanced_template_engine.cpp.s
 .PHONY : src/core/advanced_template_engine.cpp.s
 
 src/core/enhanced_text_injector.o: src/core/enhanced_text_injector.cpp.o
@@ -235,8 +270,10 @@ src/core/enhanced_text_injector.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/enhanced_text_injector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/enhanced_text_injector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/enhanced_text_injector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/enhanced_text_injector.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/enhanced_text_injector.cpp.o
 .PHONY : src/core/enhanced_text_injector.cpp.o
 
 src/core/enhanced_text_injector.i: src/core/enhanced_text_injector.cpp.i
@@ -247,8 +284,10 @@ src/core/enhanced_text_injector.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/enhanced_text_injector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/enhanced_text_injector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/enhanced_text_injector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/enhanced_text_injector.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/enhanced_text_injector.cpp.i
 .PHONY : src/core/enhanced_text_injector.cpp.i
 
 src/core/enhanced_text_injector.s: src/core/enhanced_text_injector.cpp.s
@@ -259,8 +298,10 @@ src/core/enhanced_text_injector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/enhanced_text_injector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/enhanced_text_injector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/enhanced_text_injector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/enhanced_text_injector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/enhanced_text_injector.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/enhanced_text_injector.cpp.s
 .PHONY : src/core/enhanced_text_injector.cpp.s
 
 src/core/event_queue.o: src/core/event_queue.cpp.o
@@ -271,8 +312,10 @@ src/core/event_queue.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/event_queue.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/event_queue.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/event_queue.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/event_queue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/event_queue.cpp.o
 .PHONY : src/core/event_queue.cpp.o
 
 src/core/event_queue.i: src/core/event_queue.cpp.i
@@ -283,8 +326,10 @@ src/core/event_queue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/event_queue.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/event_queue.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/event_queue.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/event_queue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/event_queue.cpp.i
 .PHONY : src/core/event_queue.cpp.i
 
 src/core/event_queue.s: src/core/event_queue.cpp.s
@@ -295,8 +340,10 @@ src/core/event_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/event_queue.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/event_queue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/event_queue.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/event_queue.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/event_queue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/event_queue.cpp.s
 .PHONY : src/core/event_queue.cpp.s
 
 src/core/memory_pool.o: src/core/memory_pool.cpp.o
@@ -307,8 +354,10 @@ src/core/memory_pool.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/memory_pool.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/memory_pool.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/memory_pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/memory_pool.cpp.o
 .PHONY : src/core/memory_pool.cpp.o
 
 src/core/memory_pool.i: src/core/memory_pool.cpp.i
@@ -319,8 +368,10 @@ src/core/memory_pool.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/memory_pool.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/memory_pool.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/memory_pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/memory_pool.cpp.i
 .PHONY : src/core/memory_pool.cpp.i
 
 src/core/memory_pool.s: src/core/memory_pool.cpp.s
@@ -331,9 +382,53 @@ src/core/memory_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/memory_pool.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/memory_pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/memory_pool.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/memory_pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/memory_pool.cpp.s
 .PHONY : src/core/memory_pool.cpp.s
+
+src/core/plugin_system.o: src/core/plugin_system.cpp.o
+.PHONY : src/core/plugin_system.o
+
+# target to build an object file
+src/core/plugin_system.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/plugin_system.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/plugin_system.cpp.o
+.PHONY : src/core/plugin_system.cpp.o
+
+src/core/plugin_system.i: src/core/plugin_system.cpp.i
+.PHONY : src/core/plugin_system.i
+
+# target to preprocess a source file
+src/core/plugin_system.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/plugin_system.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/plugin_system.cpp.i
+.PHONY : src/core/plugin_system.cpp.i
+
+src/core/plugin_system.s: src/core/plugin_system.cpp.s
+.PHONY : src/core/plugin_system.s
+
+# target to generate assembly for a file
+src/core/plugin_system.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/plugin_system.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/plugin_system.cpp.s
+.PHONY : src/core/plugin_system.cpp.s
 
 src/core/template_engine.o: src/core/template_engine.cpp.o
 .PHONY : src/core/template_engine.o
@@ -343,8 +438,10 @@ src/core/template_engine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/template_engine.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/template_engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/template_engine.cpp.o
 .PHONY : src/core/template_engine.cpp.o
 
 src/core/template_engine.i: src/core/template_engine.cpp.i
@@ -355,8 +452,10 @@ src/core/template_engine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/template_engine.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/template_engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/template_engine.cpp.i
 .PHONY : src/core/template_engine.cpp.i
 
 src/core/template_engine.s: src/core/template_engine.cpp.s
@@ -367,8 +466,10 @@ src/core/template_engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/core/template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/core/template_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/core/template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/core/template_engine.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/core/template_engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/core/template_engine.cpp.s
 .PHONY : src/core/template_engine.cpp.s
 
 src/demo_day2.o: src/demo_day2.cpp.o
@@ -419,6 +520,54 @@ src/demo_day2_simple.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/demo_day2_simple.cpp.s
 .PHONY : src/demo_day2_simple.cpp.s
 
+src/gui/web_gui.o: src/gui/web_gui.cpp.o
+.PHONY : src/gui/web_gui.o
+
+# target to build an object file
+src/gui/web_gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_gui.cpp.o
+.PHONY : src/gui/web_gui.cpp.o
+
+src/gui/web_gui.i: src/gui/web_gui.cpp.i
+.PHONY : src/gui/web_gui.i
+
+# target to preprocess a source file
+src/gui/web_gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_gui.cpp.i
+.PHONY : src/gui/web_gui.cpp.i
+
+src/gui/web_gui.s: src/gui/web_gui.cpp.s
+.PHONY : src/gui/web_gui.s
+
+# target to generate assembly for a file
+src/gui/web_gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_gui.cpp.s
+.PHONY : src/gui/web_gui.cpp.s
+
+src/gui/web_server.o: src/gui/web_server.cpp.o
+.PHONY : src/gui/web_server.o
+
+# target to build an object file
+src/gui/web_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_server.cpp.o
+.PHONY : src/gui/web_server.cpp.o
+
+src/gui/web_server.i: src/gui/web_server.cpp.i
+.PHONY : src/gui/web_server.i
+
+# target to preprocess a source file
+src/gui/web_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_server.cpp.i
+.PHONY : src/gui/web_server.cpp.i
+
+src/gui/web_server.s: src/gui/web_server.cpp.s
+.PHONY : src/gui/web_server.s
+
+# target to generate assembly for a file
+src/gui/web_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/gui/web_server.cpp.s
+.PHONY : src/gui/web_server.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -442,6 +591,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/main_day3.o: src/main_day3.cpp.o
+.PHONY : src/main_day3.o
+
+# target to build an object file
+src/main_day3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/main_day3.cpp.o
+.PHONY : src/main_day3.cpp.o
+
+src/main_day3.i: src/main_day3.cpp.i
+.PHONY : src/main_day3.i
+
+# target to preprocess a source file
+src/main_day3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/main_day3.cpp.i
+.PHONY : src/main_day3.cpp.i
+
+src/main_day3.s: src/main_day3.cpp.s
+.PHONY : src/main_day3.s
+
+# target to generate assembly for a file
+src/main_day3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/main_day3.cpp.s
+.PHONY : src/main_day3.cpp.s
 
 src/platform/linux/x11_input_manager.o: src/platform/linux/x11_input_manager.cpp.o
 .PHONY : src/platform/linux/x11_input_manager.o
@@ -491,6 +664,54 @@ src/platform/linux/x11_text_injector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/platform/linux/x11_text_injector.cpp.s
 .PHONY : src/platform/linux/x11_text_injector.cpp.s
 
+src/plugins/code_snippet_plugin.o: src/plugins/code_snippet_plugin.cpp.o
+.PHONY : src/plugins/code_snippet_plugin.o
+
+# target to build an object file
+src/plugins/code_snippet_plugin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/plugins/code_snippet_plugin.cpp.o
+.PHONY : src/plugins/code_snippet_plugin.cpp.o
+
+src/plugins/code_snippet_plugin.i: src/plugins/code_snippet_plugin.cpp.i
+.PHONY : src/plugins/code_snippet_plugin.i
+
+# target to preprocess a source file
+src/plugins/code_snippet_plugin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/plugins/code_snippet_plugin.cpp.i
+.PHONY : src/plugins/code_snippet_plugin.cpp.i
+
+src/plugins/code_snippet_plugin.s: src/plugins/code_snippet_plugin.cpp.s
+.PHONY : src/plugins/code_snippet_plugin.s
+
+# target to generate assembly for a file
+src/plugins/code_snippet_plugin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/plugins/code_snippet_plugin.cpp.s
+.PHONY : src/plugins/code_snippet_plugin.cpp.s
+
+src/test_day3_simple.o: src/test_day3_simple.cpp.o
+.PHONY : src/test_day3_simple.o
+
+# target to build an object file
+src/test_day3_simple.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/test_day3_simple.cpp.o
+.PHONY : src/test_day3_simple.cpp.o
+
+src/test_day3_simple.i: src/test_day3_simple.cpp.i
+.PHONY : src/test_day3_simple.i
+
+# target to preprocess a source file
+src/test_day3_simple.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/test_day3_simple.cpp.i
+.PHONY : src/test_day3_simple.cpp.i
+
+src/test_day3_simple.s: src/test_day3_simple.cpp.s
+.PHONY : src/test_day3_simple.s
+
+# target to generate assembly for a file
+src/test_day3_simple.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/test_day3_simple.cpp.s
+.PHONY : src/test_day3_simple.cpp.s
+
 src/utils/config_manager.o: src/utils/config_manager.cpp.o
 .PHONY : src/utils/config_manager.o
 
@@ -499,8 +720,10 @@ src/utils/config_manager.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/config_manager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/config_manager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/config_manager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/config_manager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/config_manager.cpp.o
 .PHONY : src/utils/config_manager.cpp.o
 
 src/utils/config_manager.i: src/utils/config_manager.cpp.i
@@ -511,8 +734,10 @@ src/utils/config_manager.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/config_manager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/config_manager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/config_manager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/config_manager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/config_manager.cpp.i
 .PHONY : src/utils/config_manager.cpp.i
 
 src/utils/config_manager.s: src/utils/config_manager.cpp.s
@@ -523,8 +748,10 @@ src/utils/config_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/config_manager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/config_manager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/config_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/config_manager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/config_manager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/config_manager.cpp.s
 .PHONY : src/utils/config_manager.cpp.s
 
 src/utils/logger.o: src/utils/logger.cpp.o
@@ -535,8 +762,10 @@ src/utils/logger.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/logger.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/logger.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/logger.cpp.o
 .PHONY : src/utils/logger.cpp.o
 
 src/utils/logger.i: src/utils/logger.cpp.i
@@ -547,8 +776,10 @@ src/utils/logger.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/logger.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/logger.cpp.i
 .PHONY : src/utils/logger.cpp.i
 
 src/utils/logger.s: src/utils/logger.cpp.s
@@ -559,8 +790,10 @@ src/utils/logger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/logger.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/logger.cpp.s
 .PHONY : src/utils/logger.cpp.s
 
 src/utils/performance_monitor.o: src/utils/performance_monitor.cpp.o
@@ -571,8 +804,10 @@ src/utils/performance_monitor.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/performance_monitor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/performance_monitor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/performance_monitor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/performance_monitor.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/performance_monitor.cpp.o
 .PHONY : src/utils/performance_monitor.cpp.o
 
 src/utils/performance_monitor.i: src/utils/performance_monitor.cpp.i
@@ -583,8 +818,10 @@ src/utils/performance_monitor.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/performance_monitor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/performance_monitor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/performance_monitor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/performance_monitor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/performance_monitor.cpp.i
 .PHONY : src/utils/performance_monitor.cpp.i
 
 src/utils/performance_monitor.s: src/utils/performance_monitor.cpp.s
@@ -595,8 +832,10 @@ src/utils/performance_monitor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/src/utils/performance_monitor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/src/utils/performance_monitor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/src/utils/performance_monitor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/src/utils/performance_monitor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/src/utils/performance_monitor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/src/utils/performance_monitor.cpp.s
 .PHONY : src/utils/performance_monitor.cpp.s
 
 tests/test_advanced.o: tests/test_advanced.cpp.o
@@ -657,10 +896,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... crossexpand"
+	@echo "... crossexpand_day3"
 	@echo "... demo_day2"
 	@echo "... demo_day2_simple"
 	@echo "... test_advanced"
 	@echo "... test_basic"
+	@echo "... test_day3_simple"
 	@echo "... src/core/advanced_template_engine.o"
 	@echo "... src/core/advanced_template_engine.i"
 	@echo "... src/core/advanced_template_engine.s"
@@ -673,6 +914,9 @@ help:
 	@echo "... src/core/memory_pool.o"
 	@echo "... src/core/memory_pool.i"
 	@echo "... src/core/memory_pool.s"
+	@echo "... src/core/plugin_system.o"
+	@echo "... src/core/plugin_system.i"
+	@echo "... src/core/plugin_system.s"
 	@echo "... src/core/template_engine.o"
 	@echo "... src/core/template_engine.i"
 	@echo "... src/core/template_engine.s"
@@ -682,15 +926,30 @@ help:
 	@echo "... src/demo_day2_simple.o"
 	@echo "... src/demo_day2_simple.i"
 	@echo "... src/demo_day2_simple.s"
+	@echo "... src/gui/web_gui.o"
+	@echo "... src/gui/web_gui.i"
+	@echo "... src/gui/web_gui.s"
+	@echo "... src/gui/web_server.o"
+	@echo "... src/gui/web_server.i"
+	@echo "... src/gui/web_server.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/main_day3.o"
+	@echo "... src/main_day3.i"
+	@echo "... src/main_day3.s"
 	@echo "... src/platform/linux/x11_input_manager.o"
 	@echo "... src/platform/linux/x11_input_manager.i"
 	@echo "... src/platform/linux/x11_input_manager.s"
 	@echo "... src/platform/linux/x11_text_injector.o"
 	@echo "... src/platform/linux/x11_text_injector.i"
 	@echo "... src/platform/linux/x11_text_injector.s"
+	@echo "... src/plugins/code_snippet_plugin.o"
+	@echo "... src/plugins/code_snippet_plugin.i"
+	@echo "... src/plugins/code_snippet_plugin.s"
+	@echo "... src/test_day3_simple.o"
+	@echo "... src/test_day3_simple.i"
+	@echo "... src/test_day3_simple.s"
 	@echo "... src/utils/config_manager.o"
 	@echo "... src/utils/config_manager.i"
 	@echo "... src/utils/config_manager.s"

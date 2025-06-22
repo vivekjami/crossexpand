@@ -38,9 +38,21 @@ set(CORE_SOURCES
     src/core/advanced_template_engine.cpp
     src/core/enhanced_text_injector.cpp
     src/core/memory_pool.cpp
+    src/core/plugin_system.cpp
     src/utils/logger.cpp
     src/utils/config_manager.cpp
     src/utils/performance_monitor.cpp
+)
+
+# Day 3 GUI sources
+set(GUI_SOURCES
+    src/gui/web_server.cpp
+    src/gui/web_gui.cpp
+)
+
+# Plugin sources (built-in plugins)
+set(PLUGIN_SOURCES
+    src/plugins/code_snippet_plugin.cpp
 )
 
 # Platform source files  
@@ -102,6 +114,26 @@ target_link_libraries(crossexpand
 target_include_directories(crossexpand PRIVATE ${X11_INCLUDE_DIRS})
 target_compile_options(crossexpand PRIVATE ${X11_CFLAGS_OTHER})
 
+# Day 3 complete application
+add_executable(crossexpand_day3
+    src/main_day3.cpp
+    ${CORE_SOURCES}
+    ${GUI_SOURCES}
+    ${PLUGIN_SOURCES}
+)
+
+target_link_libraries(crossexpand_day3
+    PRIVATE
+    ${X11_LIBRARIES}
+    ${UUID_LIB}
+    Threads::Threads
+    nlohmann_json::nlohmann_json
+    dl  # For dynamic loading (dlopen)
+)
+
+target_include_directories(crossexpand_day3 PRIVATE ${X11_INCLUDE_DIRS})
+target_compile_options(crossexpand_day3 PRIVATE ${X11_CFLAGS_OTHER})
+
 # Enable testing
 enable_testing()
 
@@ -133,5 +165,17 @@ target_link_libraries(test_advanced
 target_include_directories(test_advanced PRIVATE ${X11_INCLUDE_DIRS})
 target_compile_options(test_advanced PRIVATE ${X11_CFLAGS_OTHER})
 
+# Day 3 simple test
+add_executable(test_day3_simple
+    src/test_day3_simple.cpp
+    ${CORE_SOURCES}
+)
+
+target_link_libraries(test_day3_simple
+    PRIVATE
+    nlohmann_json::nlohmann_json
+)
+
 add_test(NAME AdvancedTests COMMAND test_advanced)
 add_test(NAME Day2Demo COMMAND demo_day2)
+add_test(NAME Day3SimpleTest COMMAND test_day3_simple)

@@ -28,6 +28,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -66,8 +69,10 @@ CMAKE_BINARY_DIR = /home/vivek/vivek/crossexpand/build
 all: CMakeFiles/demo_day2.dir/all
 all: CMakeFiles/demo_day2_simple.dir/all
 all: CMakeFiles/crossexpand.dir/all
+all: CMakeFiles/crossexpand_day3.dir/all
 all: CMakeFiles/test_basic.dir/all
 all: CMakeFiles/test_advanced.dir/all
+all: CMakeFiles/test_day3_simple.dir/all
 all: _deps/json-build/all
 .PHONY : all
 
@@ -79,8 +84,10 @@ preinstall: _deps/json-build/preinstall
 clean: CMakeFiles/demo_day2.dir/clean
 clean: CMakeFiles/demo_day2_simple.dir/clean
 clean: CMakeFiles/crossexpand.dir/clean
+clean: CMakeFiles/crossexpand_day3.dir/clean
 clean: CMakeFiles/test_basic.dir/clean
 clean: CMakeFiles/test_advanced.dir/clean
+clean: CMakeFiles/test_day3_simple.dir/clean
 clean: _deps/json-build/clean
 .PHONY : clean
 
@@ -106,12 +113,12 @@ _deps/json-build/clean:
 CMakeFiles/demo_day2.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2.dir/build.make CMakeFiles/demo_day2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=13,14,15,16,17,18,19,20,21,22 "Built target demo_day2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38 "Built target demo_day2"
 .PHONY : CMakeFiles/demo_day2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo_day2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo_day2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
 .PHONY : CMakeFiles/demo_day2.dir/rule
@@ -132,12 +139,12 @@ CMakeFiles/demo_day2.dir/clean:
 CMakeFiles/demo_day2_simple.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo_day2_simple.dir/build.make CMakeFiles/demo_day2_simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target demo_day2_simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49 "Built target demo_day2_simple"
 .PHONY : CMakeFiles/demo_day2_simple.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/demo_day2_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demo_day2_simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
 .PHONY : CMakeFiles/demo_day2_simple.dir/rule
@@ -158,12 +165,12 @@ CMakeFiles/demo_day2_simple.dir/clean:
 CMakeFiles/crossexpand.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand.dir/build.make CMakeFiles/crossexpand.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target crossexpand"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target crossexpand"
 .PHONY : CMakeFiles/crossexpand.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/crossexpand.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crossexpand.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
 .PHONY : CMakeFiles/crossexpand.dir/rule
@@ -178,18 +185,44 @@ CMakeFiles/crossexpand.dir/clean:
 .PHONY : CMakeFiles/crossexpand.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/crossexpand_day3.dir
+
+# All Build rule for target.
+CMakeFiles/crossexpand_day3.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target crossexpand_day3"
+.PHONY : CMakeFiles/crossexpand_day3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/crossexpand_day3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/crossexpand_day3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
+.PHONY : CMakeFiles/crossexpand_day3.dir/rule
+
+# Convenience name for target.
+crossexpand_day3: CMakeFiles/crossexpand_day3.dir/rule
+.PHONY : crossexpand_day3
+
+# clean rule for target.
+CMakeFiles/crossexpand_day3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crossexpand_day3.dir/build.make CMakeFiles/crossexpand_day3.dir/clean
+.PHONY : CMakeFiles/crossexpand_day3.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_basic.dir
 
 # All Build rule for target.
 CMakeFiles/test_basic.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_basic.dir/build.make CMakeFiles/test_basic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52 "Built target test_basic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=61,62,63,64,65,66,67,68,69,70,71 "Built target test_basic"
 .PHONY : CMakeFiles/test_basic.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_basic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_basic.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_basic.dir/rule
@@ -210,12 +243,12 @@ CMakeFiles/test_basic.dir/clean:
 CMakeFiles/test_advanced.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=33,34,35,36,37,38,39,40,41,42 "Built target test_advanced"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=50,51,52,53,54,55,56,57,58,59,60 "Built target test_advanced"
 .PHONY : CMakeFiles/test_advanced.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_advanced.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_advanced.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_advanced.dir/rule
@@ -228,6 +261,32 @@ test_advanced: CMakeFiles/test_advanced.dir/rule
 CMakeFiles/test_advanced.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_advanced.dir/build.make CMakeFiles/test_advanced.dir/clean
 .PHONY : CMakeFiles/test_advanced.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_day3_simple.dir
+
+# All Build rule for target.
+CMakeFiles/test_day3_simple.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=72,73,74,75,76,77,78,79,80,81,82 "Built target test_day3_simple"
+.PHONY : CMakeFiles/test_day3_simple.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_day3_simple.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_day3_simple.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivek/vivek/crossexpand/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_day3_simple.dir/rule
+
+# Convenience name for target.
+test_day3_simple: CMakeFiles/test_day3_simple.dir/rule
+.PHONY : test_day3_simple
+
+# clean rule for target.
+CMakeFiles/test_day3_simple.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_day3_simple.dir/build.make CMakeFiles/test_day3_simple.dir/clean
+.PHONY : CMakeFiles/test_day3_simple.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

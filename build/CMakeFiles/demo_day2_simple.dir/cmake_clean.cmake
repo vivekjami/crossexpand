@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.o.d"
   "CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.o"
   "CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.o.d"
+  "CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.o"
+  "CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.o.d"
   "CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.o"
   "CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.o.d"
   "CMakeFiles/demo_day2_simple.dir/src/demo_day2_simple.cpp.o"

@@ -27,6 +27,9 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -153,10 +156,24 @@ CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivek/vivek/crossexpand/src/core/memory_pool.cpp -o CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.s
 
+CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o: CMakeFiles/test_basic.dir/flags.make
+CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o: /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp
+CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o: CMakeFiles/test_basic.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o -MF CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o.d -o CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o -c /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp
+
+CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp > CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.i
+
+CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivek/vivek/crossexpand/src/core/plugin_system.cpp -o CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.s
+
 CMakeFiles/test_basic.dir/src/utils/logger.cpp.o: CMakeFiles/test_basic.dir/flags.make
 CMakeFiles/test_basic.dir/src/utils/logger.cpp.o: /home/vivek/vivek/crossexpand/src/utils/logger.cpp
 CMakeFiles/test_basic.dir/src/utils/logger.cpp.o: CMakeFiles/test_basic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_basic.dir/src/utils/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_basic.dir/src/utils/logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_basic.dir/src/utils/logger.cpp.o -MF CMakeFiles/test_basic.dir/src/utils/logger.cpp.o.d -o CMakeFiles/test_basic.dir/src/utils/logger.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/logger.cpp
 
 CMakeFiles/test_basic.dir/src/utils/logger.cpp.i: cmake_force
@@ -170,7 +187,7 @@ CMakeFiles/test_basic.dir/src/utils/logger.cpp.s: cmake_force
 CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o: CMakeFiles/test_basic.dir/flags.make
 CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o: /home/vivek/vivek/crossexpand/src/utils/config_manager.cpp
 CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o: CMakeFiles/test_basic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o -MF CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o.d -o CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/config_manager.cpp
 
 CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.i: cmake_force
@@ -184,7 +201,7 @@ CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.s: cmake_force
 CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o: CMakeFiles/test_basic.dir/flags.make
 CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o: /home/vivek/vivek/crossexpand/src/utils/performance_monitor.cpp
 CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o: CMakeFiles/test_basic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o -MF CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o.d -o CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o -c /home/vivek/vivek/crossexpand/src/utils/performance_monitor.cpp
 
 CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.i: cmake_force
@@ -203,6 +220,7 @@ test_basic_OBJECTS = \
 "CMakeFiles/test_basic.dir/src/core/advanced_template_engine.cpp.o" \
 "CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.o" \
 "CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.o" \
+"CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o" \
 "CMakeFiles/test_basic.dir/src/utils/logger.cpp.o" \
 "CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o" \
 "CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o"
@@ -216,12 +234,13 @@ test_basic: CMakeFiles/test_basic.dir/src/core/event_queue.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/core/advanced_template_engine.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.o
+test_basic: CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/utils/logger.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o
 test_basic: CMakeFiles/test_basic.dir/src/utils/performance_monitor.cpp.o
 test_basic: CMakeFiles/test_basic.dir/build.make
 test_basic: CMakeFiles/test_basic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable test_basic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/vivek/vivek/crossexpand/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable test_basic"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_basic.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

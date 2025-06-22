@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vivek/vivek/crossexpand/src/core/enhanced_text_injector.cpp" "CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/core/enhanced_text_injector.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/event_queue.cpp" "CMakeFiles/test_basic.dir/src/core/event_queue.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/core/event_queue.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/memory_pool.cpp" "CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/core/memory_pool.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/core/plugin_system.cpp" "CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/core/plugin_system.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/template_engine.cpp" "CMakeFiles/test_basic.dir/src/core/template_engine.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/core/template_engine.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/utils/config_manager.cpp" "CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/utils/config_manager.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/utils/logger.cpp" "CMakeFiles/test_basic.dir/src/utils/logger.cpp.o" "gcc" "CMakeFiles/test_basic.dir/src/utils/logger.cpp.o.d"

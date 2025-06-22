@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_advanced.dir/src/core/event_queue.cpp.o.d"
   "CMakeFiles/test_advanced.dir/src/core/memory_pool.cpp.o"
   "CMakeFiles/test_advanced.dir/src/core/memory_pool.cpp.o.d"
+  "CMakeFiles/test_advanced.dir/src/core/plugin_system.cpp.o"
+  "CMakeFiles/test_advanced.dir/src/core/plugin_system.cpp.o.d"
   "CMakeFiles/test_advanced.dir/src/core/template_engine.cpp.o"
   "CMakeFiles/test_advanced.dir/src/core/template_engine.cpp.o.d"
   "CMakeFiles/test_advanced.dir/src/utils/config_manager.cpp.o"

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/vivek/vivek/crossexpand/src/core/enhanced_text_injector.cpp" "CMakeFiles/demo_day2_simple.dir/src/core/enhanced_text_injector.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/core/enhanced_text_injector.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/event_queue.cpp" "CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/core/event_queue.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/memory_pool.cpp" "CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/core/memory_pool.cpp.o.d"
+  "/home/vivek/vivek/crossexpand/src/core/plugin_system.cpp" "CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/core/plugin_system.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/core/template_engine.cpp" "CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/core/template_engine.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/demo_day2_simple.cpp" "CMakeFiles/demo_day2_simple.dir/src/demo_day2_simple.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/demo_day2_simple.cpp.o.d"
   "/home/vivek/vivek/crossexpand/src/utils/config_manager.cpp" "CMakeFiles/demo_day2_simple.dir/src/utils/config_manager.cpp.o" "gcc" "CMakeFiles/demo_day2_simple.dir/src/utils/config_manager.cpp.o.d"
